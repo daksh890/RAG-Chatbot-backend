@@ -1,4 +1,4 @@
-import { getSessions, createSession } from "../services/chatService.ts";
+import { getSessions, createSession } from "../services/chatService";
 import type { Request, Response } from "express";
 
 const getAllSessions = async (req: Request, res: Response) => {

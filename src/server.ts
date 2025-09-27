@@ -5,10 +5,10 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import { Server as SocketIO } from 'socket.io';
 import { createServer } from 'http';
-import chatRouter from './routes/chatRoutes.ts';
-import sessionRouter from './routes/sessionRoutes.ts';
-import { registerSocketHandlers } from './sockets/socketHandler.ts';
-import { run } from './services/indexArticles.ts';
+import chatRouter from './routes/chatRoutes';
+import sessionRouter from './routes/sessionRoutes';
+import { registerSocketHandlers } from './sockets/socketHandler';
+import { run } from './services/indexArticles';
 dotenv.config();
 
 const app: Application = express();

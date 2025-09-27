@@ -1,8 +1,8 @@
 // src/scripts/indexArticles.ts
-import { fetchRSSArticles } from "../services/ragIngestionService.ts";
-import type { Article } from "../services/ragIngestionService.ts";
-import { getEmbeddings } from "../services/jinaEmbeddings.ts";
-import { createCollection, upsertArticles } from "../services/qdrantService.ts";
+import { fetchRSSArticles } from "../services/ragIngestionService";
+import type { Article } from "../services/ragIngestionService";
+import { getEmbeddings } from "../services/jinaEmbeddings";
+import { createCollection, upsertArticles } from "../services/qdrantService";
 
 export const run = async () => {
   try {

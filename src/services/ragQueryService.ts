@@ -1,7 +1,7 @@
 // src/services/ragQueryService.ts
-import { getEmbeddings } from "./jinaEmbeddings.ts";
-import { searchArticles } from "./qdrantService.ts";
-import gemini from "../config/gemini.ts";
+import { getEmbeddings } from "./jinaEmbeddings";
+import { searchArticles } from "./qdrantService";
+import gemini from "../config/gemini";
 
 
 export const queryArticles = async (query: string, topK: number = 5) => {

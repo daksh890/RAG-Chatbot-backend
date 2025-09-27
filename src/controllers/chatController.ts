@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import { handleMessage, clearSession as clearHistory, getHistory } from "../services/chatService.ts";
-import { queryArticles } from "../services/ragQueryService.ts";
-import type { Message } from "../types/chat.ts";
+import { handleMessage, clearSession as clearHistory, getHistory } from "../services/chatService";
+import { queryArticles } from "../services/ragQueryService";
+import type { Message } from "../types/chat";
 
 const sendMessage = async (req: Request, res: Response) => {
   try {

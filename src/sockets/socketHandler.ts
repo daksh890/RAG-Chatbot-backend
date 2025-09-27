@@ -1,6 +1,6 @@
 import { Server, Socket } from "socket.io";
-import { handleMessage, getHistory, clearSession } from "../services/chatService.ts";
-import { queryArticles } from "../services/ragQueryService.ts";
+import { handleMessage, getHistory, clearSession } from "../services/chatService";
+import { queryArticles } from "../services/ragQueryService";
 
 export const registerSocketHandlers = (io: Server, socket: Socket) => {
   console.log("Client connected:", socket.id);

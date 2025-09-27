@@ -1,5 +1,5 @@
-import redisClient from "../config/redis.ts";
-import type { Message } from "../types/chat.ts";
+import redisClient from "../config/redis";
+import type { Message } from "../types/chat";
 import dotenv from "dotenv";
 dotenv.config();
 

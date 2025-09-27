@@ -1,7 +1,7 @@
 // src/services/qdrantService.ts
 import dotenv from "dotenv";
-import type { Article } from "../services/ragIngestionService.ts";
-import { qdrantClient } from "../config/qdrant.ts";
+import type { Article } from "../services/ragIngestionService";
+import { qdrantClient } from "../config/qdrant";
 
 dotenv.config();
 const COLLECTION_NAME = process.env.QDRANT_COLLECTION || "news_articles"

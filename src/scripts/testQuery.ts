@@ -1,5 +1,5 @@
 // src/scripts/testQuery.ts
-import { queryArticles } from "../services/ragQueryService.ts";
+import { queryArticles } from "../services/ragQueryService";
 
 const run = async () => {
   const results = await queryArticles("Russia Ukraine war news", 5);
