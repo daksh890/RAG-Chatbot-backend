@@ -13,7 +13,7 @@ dotenv.config();
 
 const app: Application = express();
 const httpServer = createServer(app);
-const io = new SocketIO(httpServer, { cors: { origin: "*", methods: ['GET', 'POST'] } });
+const io = new SocketIO(httpServer, { cors: { origin: ["https://rag-chatbot-frontend-theta.vercel.app", "http://localhost:3000"], methods: ['GET', 'POST'] } });
 
 app.use(cors());
 app.use(bodyParser.json());
