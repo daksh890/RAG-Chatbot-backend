@@ -123,7 +123,7 @@ npm run dev
 ```mermaid
 sequenceDiagram
     participant I as Ingest Script (RSS/Scraper)
-    participant P as Parser (rss-parser / cheerio)
+    participant P as Parser (rss-parser)
     participant J as Jina Embeddings API
     participant Q as Qdrant (Vector DB)
     participant S as (Optional) SQL / Storage
@@ -194,7 +194,7 @@ sequenceDiagram
   participant R as Redis (session cache)
   participant J as Jina Embeddings (query embedding)
   participant Q as Qdrant (Vector DB)
-  participant L as LLM API
+  participant L as LLM API (Gemini)
 
   F->>B: Send message (send_message / POST /api/chat) {sessionId, text}
   B->>R: Save user message -> RPUSH chat:{sessionId}
@@ -213,3 +213,11 @@ sequenceDiagram
     B->>R: Save bot reply into chat:{sessionId}
   end
 ```
+
+---
+
+## ⚡ Suggested Improvements
+- Optimized Ingestion Pipeline – Split text into smaller semantic chunks for faster and more accurate retrieval.
+- Streaming Responses from LLM – Stream responses directly from Gemini via WebSockets to reduce latency.
+- Rate Limiting – Use rate-limit to prevent endpoint abuse and control API costs.
+- Input Sanitization – Sanitize all incoming requests to prevent injection attacks targeting Redis or Qdrant.
